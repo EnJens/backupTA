@@ -17,10 +17,10 @@ windows\adb.exe push files/dirtycow%SUFFIX% /data/local/tmp/dirtycow
 windows\adb.exe push files/run-as%SUFFIX% /data/local/tmp/run-as
 windows\adb.exe push files/exploitta%SUFFIX% /data/local/tmp/exploitta
 windows\adb.exe push files/dumpta%SUFFIX% /sdcard/dumpta
-windows\adb.exe push files/backupTA.sh /data/local/tmp
+windows\adb.exe push files/backupTADevice.sh /data/local/tmp
 windows\adb.exe shell "chmod 755 /data/local/tmp/*"
-windows\adb.exe shell "/data/local/tmp/backupTA.sh %TAIMG%"
+windows\adb.exe shell "/data/local/tmp/backupTADevice.sh %TAIMG%"
 windows\adb.exe pull /data/local/tmp/%TAIMG% %TAIMG%
-windows\adb.exe shell "rm -f /data/local/tmp/dirtycow /data/local/tmp/run-as /data/local/tmp/exploitta /sdcard/dumpta /data/local/tmp/backupTA.sh"
+windows\adb.exe shell "rm -f /data/local/tmp/dirtycow /data/local/tmp/run-as /data/local/tmp/exploitta /sdcard/dumpta /data/local/tmp/backupTADevice.sh"
 echo TA Sucessfully pulled to %TAIMG%
 pause
